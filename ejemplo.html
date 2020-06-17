@@ -1,1 +1,229 @@
-ejemplo.html
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest
+$ git init
+Initialized empty Git repository in C:/xampp/htdocs/gitTest/.git/
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html
+        readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git add -A
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   readme.md
+
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   readme.md
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.html
+
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git iff
+git: 'iff' is not a git command. See 'git --help'.
+
+The most similar command is
+        diff
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git diff
+diff --git a/index.html b/index.html
+index cfe286a..282914f 100644
+--- a/index.html
++++ b/index.html
+@@ -5,5 +5,10 @@
+ </head>
+ <body>
+ <h1>Hola </h1>
++
++<h1>lINEA 3</h1>
++<h1>lINEA 3</h1>
++<h1>lINEA 3</h1>
++
+ </body>
+ </html>
+\ No newline at end of file
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git add index.html
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   index.html
+        new file:   readme.md
+
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git commit -m "Anadido tres lineas"
+[master (root-commit) d699e3a] Anadido tres lineas
+ 2 files changed, 15 insertions(+)
+ create mode 100644 index.html
+ create mode 100644 readme.md
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git log
+commit d699e3a9725b9ef041b84cc243ada6dc45d5e58d (HEAD -> master)
+Author: Fran <francisarielalma.96@gmail.com>
+Date:   Wed Jun 17 00:37:16 2020 -0400
+
+    Anadido tres lineas
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git remote add origin https://github.com/franalmada/GitTestLean.git
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git push -u origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 357 bytes | 27.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/franalmada/GitTestLean.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        contacto.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git add contacto.html
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   contacto.html
+
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   contacto.html
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   contacto.html
+
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git diff
+diff --git a/contacto.html b/contacto.html
+index a11e378..1096db9 100644
+--- a/contacto.html
++++ b/contacto.html
+@@ -5,5 +5,15 @@
+ </head>
+ <body>
+ <h1>Este es la pagina de contacto</h1>
++
++<p>With supporting text below as a natural lead-in to additional content.
++
++With supporting text below as a natural lead-in to additional content.
++
++With supporting text below as a natural lead-in to additional content.
++
++With supporting text below as a natural lead-in to additional content.
++
++</p>
+ </body>
+ </html>
+\ No newline at end of file
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git add -A
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   contacto.html
+
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git commit -m "Este es el segundo commit"
+[master 65c8ddc] Este es el segundo commit
+ 1 file changed, 19 insertions(+)
+ create mode 100644 contacto.html
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git log
+commit 65c8ddc59a146986f5ca998b6037303b7dbf1ee9 (HEAD -> master)
+Author: Fran <francisarielalma.96@gmail.com>
+Date:   Wed Jun 17 00:50:52 2020 -0400
+
+    Este es el segundo commit
+
+commit d699e3a9725b9ef041b84cc243ada6dc45d5e58d (origin/master)
+Author: Fran <francisarielalma.96@gmail.com>
+Date:   Wed Jun 17 00:37:16 2020 -0400
+
+    Anadido tres lineas
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
+$ git push -u
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 476 bytes | 476.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/franalmada/GitTestLean.git
+   d699e3a..65c8ddc  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Usuario@LAPTOP-7J4RGHUS MINGW64 /c/xampp/htdocs/gitTest (master)
